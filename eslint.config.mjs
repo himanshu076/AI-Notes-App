@@ -11,6 +11,11 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      "react/no-unescaped-entities": "off",   // disable the rule for react components and pages and allow to use the apostrophe into the text or string.
+    },
+  },
 ];
 
 export default eslintConfig;
